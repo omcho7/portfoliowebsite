@@ -9,6 +9,12 @@ import { useRef } from "react";
 import ScrollArrow from "../components/ScrollArrow";
 import SkillCard from "../components/SkillCard";
 import { Link } from "react-router-dom";
+import Socials from "../components/Socials";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
+
 
 function Homepage() {
   const myRef = useRef(null);
@@ -26,7 +32,7 @@ function Homepage() {
         >
           <Box maxWidth={500} style={{ marginTop: "5%" }}>
             <h2 style={{ textAlign: "center" }}>Welcome, I'm Omar.</h2>
-            <p style={{ textAlign: "center", marginBottom: "120pt" }}>
+            <p style={{ textAlign: "center", marginBottom: "35pt" }}>
               I have a passion for art and design, specializing in graphic
               design, UX/UI design, web development, and illustration. Whether
               I'm crafting captivating user experiences or diving into the world
@@ -37,6 +43,29 @@ function Homepage() {
             </p>
           </Box>
         </Grid>
+
+        <Grid item xs={4} md={4} style={{ marginTop: "5%", marginBottom: "5%" }}>
+          <Socials 
+            icon={<LinkedInIcon />}
+            text="LinkedIn Profile"
+            link="https://www.linkedin.com/in/omar-osmanovic/"
+          />
+        </Grid>
+        <Grid item xs={4} md={4} style={{ marginTop: "5%", marginBottom: "5%" }}>
+          <Socials 
+            icon={<ShoppingBagIcon/>}
+            text="RedBubble Shop"
+            link="https://www.redbubble.com/people/Omcho/shop?asc=u"
+          />
+        </Grid>
+        <Grid item xs={4} md={4} style={{ marginTop: "5%", marginBottom: "5%" }}>
+          <Socials 
+            icon={<GitHubIcon/>}
+            text="GitHub Profile"
+            link="https://github.com/omcho7"
+          />
+        </Grid>
+
 
         <Grid
           ref={myRef}

@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import EmailIcon from "@mui/icons-material/Email";
 import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswer";
+import axios from "axios";
 
 function Contact() {
   const [fullName, setFullName] = React.useState("");
@@ -26,14 +27,25 @@ function Contact() {
     return Object.values(tempErrors).every((x) => x === "");
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (validateForm()) {
-      console.log({ fullName, email, inquiry });
-      // Add your form submission logic here
+      try {
+        await axios.post('/api/send-email', {
+          fullName,
+          email,
+          inquiry
+        });
+        alert("Your inquiry has been sent!");
+        setFullName("");
+        setEmail("");
+        setInquiry("");
+      } catch (error) {
+        console.error("There was an error sending the email!", error);
+        alert("There was an error sending your inquiry. Please try again later.");
+      }
     }
   };
-
   return (
     <Box
       component="form"
