@@ -9,12 +9,11 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import BoltIcon from '@mui/icons-material/Bolt';
+import { email } from './config.js';
+
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -33,6 +32,10 @@ function Header() {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+  };
+
+  const handleMailTo = () => {
+    window.open(`mailto:${email}`, '_blank');
   };
 
   return (
@@ -76,19 +79,19 @@ function Header() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <MenuItem onClick={handleCloseNavMenu} className="menulink">
+              <MenuItem onClick={handleCloseNavMenu} className="menulink" sx={{ border: '1px solid white', borderRadius: '4px', margin: '5px' }}>
                 <Typography textAlign="center">
                   <Link to="/">Home</Link>
                 </Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu} className="menulink">
+              <MenuItem onClick={handleCloseNavMenu} className="menulink" sx={{ border: '1px solid white', borderRadius: '4px', margin: '5px' }}>
                 <Typography textAlign="center">
                   <Link to="/mywork">My Work</Link>
                 </Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu} className="menulink">
+              <MenuItem onClick={handleMailTo} className="menulink" sx={{ border: '1px solid white', borderRadius: '4px', margin: '5px' }}>
                 <Typography textAlign="center">
-                  <Link to="/contact">Contact</Link>
+                  Contact Me
                 </Typography>
               </MenuItem>
             </Menu>
@@ -103,7 +106,7 @@ function Header() {
           >
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}
+              sx={{ my: 2, color: "white", display: "block", border: '1px solid white', borderRadius: '4px', margin: '5px' }}
             >
               <Link to="/" style={{ color: "white" }}>
                 Home
@@ -111,19 +114,17 @@ function Header() {
             </Button>
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}
+              sx={{ my: 2, color: "white", display: "block", border: '1px solid white', borderRadius: '4px', margin: '5px' }}
             >
               <Link to="/mywork" style={{ color: "white" }}>
                 My Work
               </Link>
             </Button>
             <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}
+              onClick={handleMailTo}
+              sx={{ my: 2, color: "white", display: "block", border: '1px solid white', borderRadius: '4px', margin: '5px' }}
             >
-              <Link to="/contact" style={{ color: "white" }}>
-                Contact
-              </Link>
+              Contact Me
             </Button>
           </Box>
         </Toolbar>
@@ -132,5 +133,3 @@ function Header() {
   );
 }
 export default Header;
-
-

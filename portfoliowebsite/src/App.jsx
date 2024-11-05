@@ -3,7 +3,6 @@ import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import Homepage from "./pages/Homepage.jsx";
 import MyWork from "./pages/Mywork.jsx";
-import Contact from "./pages/Contact.jsx";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import "./App.css";
@@ -20,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/mywork" element={<MyWork />} />
-            <Route path="/contact" element={<Contact />} />
+            
           </Routes>
           <Grid item xs={12}>
             <Footer />

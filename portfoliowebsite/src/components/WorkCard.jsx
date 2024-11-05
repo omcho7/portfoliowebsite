@@ -9,7 +9,12 @@ const MyCard = ({ imgSrc, title, description }) => (
         alt={title}
         style={{ width: "100%", height: "auto", borderRadius: "10pt" }}
       />
-      <Typography gutterBottom variant="h5" component="div">
+      <Typography
+        gutterBottom
+        variant="h5"
+        component="div"
+        sx={{ fontFamily: 'Montserrat, sans-serif', fontSize: '15pt' }}
+      >
         {title}
       </Typography>
       <Typography variant="body2">{description}</Typography>
