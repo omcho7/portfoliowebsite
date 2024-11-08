@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import WorkCard from "../components/WorkCard";
+import WideCard from "../components/WideCard";
 import { useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -25,10 +26,36 @@ function MyWork() {
     <div>
       <h1 ref={refs.graphicDesign}>Graphic Design</h1>
       <Grid container spacing={3}>
+
+        <Grid item xs={12} md={12} display={"flex"} justifyContent={"center"} >
+          <WideCard
+          
+            imgSrc={"https://firebasestorage.googleapis.com/v0/b/omar-osmanovic.appspot.com/o/devfest%20banner-min.png?alt=media&token=355a80d1-4d92-4c5f-8318-23fce2aa79f0"}
+            title={"Official Banner for Google Developer Group Sarajevo DevFest 2024"}
+            description={""}
+          />
+        </Grid>
+        
+        <Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
+          <WorkCard
+            imgSrc={"https://firebasestorage.googleapis.com/v0/b/omar-osmanovic.appspot.com/o/Slide%204_3%20-%2026.png?alt=media&token=fd12e8a5-aead-4922-8a8e-95d3e36f510a"}
+            title={"Panel Discussion #1 | GDG Sarajevo | Featured on DevFest Sarajevo 2024"}
+            description={""}
+          />
+        </Grid>
+
+        <Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
+          <WorkCard
+            imgSrc={"https://firebasestorage.googleapis.com/v0/b/omar-osmanovic.appspot.com/o/Slide%204_3%20-%2025.png?alt=media&token=3540311d-39d3-4801-8622-088cbcbd5eb6"}
+            title={"Panel Discussion #2 | GDG Sarajevo | Featured on DevFest Sarajevo 2024"}
+            description={""}
+          />
+        </Grid>
+
         <Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
           <WorkCard
             imgSrc={"https://firebasestorage.googleapis.com/v0/b/omar-osmanovic.appspot.com/o/Slide%204_3%20-%201.png?alt=media&token=523fc45a-d4fc-4444-943d-40e8fff8eca5"}
-            title={"Poster and Banner for Google Developer Group Sarajevo"}
+            title={"Poster and Banner | Google Developer Group Sarajevo"}
             description={""}
           />
         </Grid>
@@ -36,7 +63,7 @@ function MyWork() {
         <Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
           <WorkCard
             imgSrc={"https://firebasestorage.googleapis.com/v0/b/omar-osmanovic.appspot.com/o/gdg%2076.png?alt=media&token=aaeaffa9-0ed0-4fbe-ab62-30ffb76592a5"}
-            title={"Event Banner for Google Developer Group Sarajevo"}
+            title={"Event Banner | Google Developer Group Sarajevo"}
             description={""}
           />
         </Grid>
@@ -95,14 +122,30 @@ function MyWork() {
         <Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
           <WorkCard
             imgSrc={"https://firebasestorage.googleapis.com/v0/b/omar-osmanovic.appspot.com/o/Slide%204_3%20-%209.png?alt=media&token=0f283e3e-79f9-490f-91de-5ea4351ebc60"}
-            title={"HealthMate Promo Logo"}
+            title={"HealthMate Logo | IEEE Innovation Nation"}
             description={""}
           />
         </Grid>
-        <Grid item xs={12} md={12} display={"flex"} justifyContent={"center"}>
+        <Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
           <WorkCard
             imgSrc={"https://firebasestorage.googleapis.com/v0/b/omar-osmanovic.appspot.com/o/Slide%204_3%20-%2010.png?alt=media&token=d03955fc-85e9-49b6-bbd1-28ca2959fe84"}
-            title={"IdeaLab Logo"}
+            title={"IdeaLab Logo Commision"}
+            description={""}
+          />
+        </Grid>
+
+        <Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
+          <WorkCard
+            imgSrc={"https://firebasestorage.googleapis.com/v0/b/omar-osmanovic.appspot.com/o/Slide%204_3%20-%2024.png?alt=media&token=93333b7c-eaf9-4853-9f53-24721392b7cf"}
+            title={"Verdi Logo | Eco Volunteering Platform | Good Hackathon 2024 Winner"}
+            description={""}
+          />
+        </Grid>
+
+        <Grid item xs={12} md={12} display={"flex"} justifyContent={"center"}>
+          <WorkCard
+            imgSrc={"https://firebasestorage.googleapis.com/v0/b/omar-osmanovic.appspot.com/o/Slide%204_3%20-%2027.png?alt=media&token=773cc6e1-815d-450f-a4d5-21e9417ffc9b"}
+            title={"Cinema Infographic for Advertising Company"}
             description={""}
           />
         </Grid>

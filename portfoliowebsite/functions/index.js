@@ -2,7 +2,7 @@ const functions = require("firebase-functions");
 const axios = require("axios");
 
 exports.sendContactEmail = functions.https.onRequest(async (req, res) => {
-  const { fullName, email, inquiry } = req.body;
+  const {fullName, email, inquiry} = req.body;
 
   // Validate the input
   if (!fullName || !email || !inquiry) {
@@ -17,24 +17,24 @@ exports.sendContactEmail = functions.https.onRequest(async (req, res) => {
     await axios.post(
       apiEndpoint,
       {
-        sender: { email: email, name: fullName },
+        sender: {email: email, name: fullName},
         to: [
           {
             email: "osmanovicomar@gmail.com",
-            name: "Omar Osmanovic",
-          },
+            name: "Omar Osmanovic"
+          }
         ],
         subject: "Omar Osmanovic Website Inquiry",
         htmlContent: `
         <p>Name: ${fullName}</p>
         <p>Email: ${email}</p>
-        <p>Inquiry: ${inquiry}</p>`,
+        <p>Inquiry: ${inquiry}</p>`
       },
       {
         headers: {
           "Content-Type": "application/json",
-          "api-key": apiKey,
-        },
+          "api-key": apiKey
+        }
       }
     );
 
