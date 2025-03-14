@@ -41,15 +41,26 @@ function Homepage() {
       
 
 
-        <Box sx={{ flexGrow: 1, padding: "20px", marginBottom: "10%" }}>
+        
       <Grid
+      paddingLeft={15}
+      paddingRight={10}
+      marginBottom={20}
         container
+        display={"flex"}
+        flexDirection="row"
         spacing={4} // Adds spacing between the cards
         justifyContent="center" // Centers the cards horizontally
         alignItems="stretch" // Ensures all cards have the same height
         ref={myRef}
       >
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid
+        display={"flex"}
+        flexDirection="column" 
+        alignContent={"center"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        item xs={12} sm={6} md={3}>
           <Link to="/mywork#graphicDesign">
           <SkillCard
             icon={<DesignServicesIcon sx={{ fontSize: 80 }} />}
@@ -85,7 +96,7 @@ function Homepage() {
           /></Link>
         </Grid>
       </Grid>
-    </Box>
+    
 
 
 
