@@ -39,7 +39,7 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "transparent" }}>
+    <AppBar position="static" sx={{ backgroundColor: "transparent", fontFamily: "Montserrat, sans-serif" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <BoltIcon sx={{ display: { xs: "flex", md: "flex" }, mr: 5 }} />
@@ -77,19 +77,20 @@ function Header() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: "block", md: "none" },
+                fontFamily: "Montserrat, sans-serif",
               }}
             >
-              <MenuItem onClick={handleCloseNavMenu} className="menulink" sx={{ border: '1px solid white', borderRadius: '4px', margin: '5px' }}>
+              <MenuItem onClick={handleCloseNavMenu} className="menulink" sx={{ margin: '5px', fontFamily: "Montserrat, sans-serif" }}>
                 <Typography textAlign="center">
                   <Link to="/">Home</Link>
                 </Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu} className="menulink" sx={{ border: '1px solid white', borderRadius: '4px', margin: '5px' }}>
+              <MenuItem onClick={handleCloseNavMenu} className="menulink" sx={{margin: '5px', fontFamily: "Montserrat, sans-serif" }}>
                 <Typography textAlign="center">
                   <Link to="/mywork">My Work</Link>
                 </Typography>
               </MenuItem>
-              <MenuItem onClick={handleMailTo} className="menulink" sx={{ border: '1px solid white', borderRadius: '4px', margin: '5px' }}>
+              <MenuItem onClick={handleMailTo} className="menulink" sx={{margin: '5px', fontFamily: "Montserrat, sans-serif" }}>
                 <Typography textAlign="center">
                   Contact Me
                 </Typography>
@@ -106,26 +107,35 @@ function Header() {
           >
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block", border: '1px solid white', borderRadius: '4px', margin: '5px' }}
+              sx={{ my: 2, color: "white", display: "block", margin: '5px', fontFamily: "Montserrat, sans-serif" }}
             >
-              <Link to="/" style={{ color: "white" }}>
+              <Link to="/" style={{ color: "white", fontFamily: "Montserrat, sans-serif" }}>
                 Home
               </Link>
             </Button>
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block", border: '1px solid white', borderRadius: '4px', margin: '5px' }}
+              sx={{ my: 2, color: "white", display: "block", margin: '5px', fontFamily: "Montserrat, sans-serif" }}
             >
-              <Link to="/mywork" style={{ color: "white" }}>
-                My Work
+              <Link to="/mywork" style={{ color: "white", fontFamily: "Montserrat, sans-serif" }}>
+                Portfolio
               </Link>
             </Button>
             <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: "white", display: "block", margin: '5px', fontFamily: "Montserrat, sans-serif" }}
+            >
+              <a href="https://drive.google.com/file/d/1lKUrUAx9RDW1MyG8DIrzGN6YUl_fVBxo/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
+            </Button>
+            <Button
               onClick={handleMailTo}
-              sx={{ my: 2, color: "white", display: "block", border: '1px solid white', borderRadius: '4px', margin: '5px' }}
+              sx={{ my: 2, color: "white", display: "block", margin: '5px', fontFamily: "Montserrat, sans-serif" }}
             >
               Contact Me
             </Button>
+            
           </Box>
         </Toolbar>
       </Container>

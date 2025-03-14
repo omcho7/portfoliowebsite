@@ -30,22 +30,70 @@ function Homepage() {
           flexDirection="column"
           alignItems="center"
         >
-          <Box maxWidth={500} style={{ marginTop: "5%" }}>
-            <h2 style={{ textAlign: "center" }}>Welcome, I'm Omar.</h2>
-            <p style={{ textAlign: "center", marginBottom: "35pt" }}>
-              I have a passion for art and design, specializing in graphic
-              design, UX/UI design, web development, and illustration. Whether
-              I'm crafting captivating user experiences or diving into the world
-              of digital arts, I'm always seeking to fuse technology and
-              creativity. As a graphic design enthusiast and computer science
-              student, I'm on a constant journey of learning, exploring, and
-              pushing the boundaries of visual expression.
+          <Box maxWidth={800} style={{ marginTop: "20%" }}>
+            <h2 style={{ textAlign: "center" }}>Welcome, I’m Omar — Designer. Developer. Creator.</h2>
+            <p style={{ textAlign: "center", marginBottom: "45%" }}>
+              I blend art and technology to craft sleek, user-focused designs — from intuitive UX/UI interfaces to vibrant illustrations and responsive websites. As a graphic design enthusiast and computer science student, I’m on a continuous journey to explore, create, and redefine digital experiences.
             </p>
           </Box>
         </Grid>
 
+      
+
+
+        <Box sx={{ flexGrow: 1, padding: "20px", marginBottom: "10%" }}>
+      <Grid
+        container
+        spacing={4} // Adds spacing between the cards
+        justifyContent="center" // Centers the cards horizontally
+        alignItems="stretch" // Ensures all cards have the same height
+        ref={myRef}
+      >
+        <Grid item xs={12} sm={6} md={3}>
+          <Link to="/mywork#graphicDesign">
+          <SkillCard
+            icon={<DesignServicesIcon sx={{ fontSize: 80 }} />}
+            title="Graphic Design"
+            description="I excel in graphic design, using tools like Photoshop, Figma, and Canva to create visually stunning, professional, and effective designs."
+          /></Link>
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={3}>
+          <Link to="/mywork#uxUi">
+          <SkillCard
+            icon={<ArchitectureIcon sx={{ fontSize: 80 }} />}
+            title="UX/UI Design"
+            description="I craft intuitive and visually appealing user experiences that seamlessly blend functionality and aesthetics using tools like Figma and Adobe XD."
+          /></Link>
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={3}>
+          <Link to="/mywork#webDev">
+          <SkillCard
+            icon={<IntegrationInstructionsIcon sx={{ fontSize: 80 }} />}
+            title="Web Development"
+            description="I build responsive, user-friendly websites that combine functionality and design using HTML, CSS, JavaScript, React, and more."
+          /></Link>
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={3}>
+          <Link to="/mywork#illustration">
+          <SkillCard
+            icon={<BrushIcon sx={{ fontSize: 80 }} />}
+            title="Illustration"
+            description="I create detailed and expressive artwork that brings ideas to life using both traditional and digital mediums like Photoshop and Procreate."
+          /></Link>
+        </Grid>
+      </Grid>
+    </Box>
+
+
+
+
+
         <Grid item xs={4} md={4} style={{ marginTop: "5%", marginBottom: "5%" }}>
-          <Socials 
+          <Socials
+            className="socials"
             icon={<LinkedInIcon />}
             text="LinkedIn Profile"
             link="https://www.linkedin.com/in/omar-osmanovic/"
@@ -65,54 +113,6 @@ function Homepage() {
             link="https://github.com/omcho7"
           />
         </Grid>
-
-
-        <Grid
-          ref={myRef}
-          item
-          xs={6}
-          md={3}
-          style={{ marginTop: "40%", marginBottom: "15%" }}
-        >
-          <Link to="/mywork#graphicDesign">
-            <SkillCard
-              icon={<DesignServicesIcon sx={{ fontSize: 100 }} />}
-              title="Graphic Design"
-              description="I excel in graphic design, using tools like Photoshop, Figma, and Canva to create visually stunning, professional, and effective designs that communicate messages clearly."
-            />
-          </Link>
-        </Grid>
-
-        <Grid item xs={6} md={3} style={{ marginTop: "40%" }}>
-          <Link to="/mywork#uxUi">
-            <SkillCard
-              icon={<ArchitectureIcon sx={{ fontSize: 100 }} />}
-              title="UX/UI Design"
-              description="I excel in UX/UI design, crafting intuitive and visually appealing user experiences that seamlessly blend functionality and aesthetics using tools like Figma and Adobe XD."
-            />
-          </Link>
-        </Grid>
-
-        <Grid item xs={6} md={3} style={{ marginTop: "40%" }}>
-          <Link to="/mywork#webDev">
-            <SkillCard
-              icon={<IntegrationInstructionsIcon sx={{ fontSize: 100 }} />}
-              title="Web Development"
-              description="I excel in web development, building responsive, user-friendly websites that combine functionality and design using HTML, CSS, JavaScript, React, Jquery, AJAX and more."
-            />
-          </Link>
-        </Grid>
-
-        <Grid item xs={6} md={3} style={{ marginTop: "40%" }}>
-          <Link to="/mywork#illustration">
-            <SkillCard
-              icon={<BrushIcon sx={{ fontSize: 100 }} />}
-              title="Illustration"
-              description="I excel in illustration, creating detailed and expressive artwork that brings ideas to life using both traditional and digital mediums (Adobe Photoshop, Procreate, Krita, etc.)."
-            />
-          </Link>
-        </Grid>
-
         <ScrollArrow targetRef={myRef}></ScrollArrow>
       </Grid>
     </div>

@@ -18,6 +18,7 @@ const Socials = ({ icon, text, link }) => {
      
     >
         <Typography gutterBottom component="p" sx={{
+              fontFamily: "Montserrat, sans-serif",
              display: "flex",
              alignItems: "center",
              marginBottom: "0",

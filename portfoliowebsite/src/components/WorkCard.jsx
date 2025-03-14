@@ -7,9 +7,10 @@ const MyCard = ({ imgSrc, title, description }) => (
       <img
         src={imgSrc}
         alt={title}
-        style={{ width: "100%", height: "auto", borderRadius: "10pt" }}
+        style={{ width: "100%", height: "auto", borderRadius: "15pt" }}
       />
       <Typography
+      className="workTitle"
         gutterBottom
         variant="h5"
         component="div"

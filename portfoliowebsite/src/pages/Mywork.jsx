@@ -25,7 +25,7 @@ function MyWork() {
   }, [hash]);
   return (
     <div>
-      <h1 ref={refs.graphicDesign}>Graphic Design</h1>
+      <h1 ref={refs.graphicDesign} style={{ marginTop: "10%" }}>Graphic Design</h1>
       <Grid container spacing={3}>
 
         <Grid item xs={12} md={12} display={"flex"} justifyContent={"center"} >
@@ -151,7 +151,7 @@ function MyWork() {
           />
         </Grid>
       </Grid>
-      <h1 ref={refs.uxUi}>UX/UI</h1>
+      <h1 ref={refs.uxUi} style={{ marginTop: "10%" }}>UX/UI</h1>
       <Grid container spacing={3}>
 
         <Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
@@ -309,7 +309,7 @@ function MyWork() {
           </Box>
         </Grid>
       </Grid>
-      <h1 ref={refs.webDev}>Web Development</h1>
+      <h1 ref={refs.webDev} style={{ marginTop: "10%" }}>Web Development</h1>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
           <WorkCard

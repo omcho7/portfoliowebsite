@@ -5,12 +5,14 @@ import Homepage from "./pages/Homepage.jsx";
 import MyWork from "./pages/Mywork.jsx";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
+import AnimatedBackground from "./components/AnimatedBackground.jsx";
 import "./App.css";
 
 function App() {
   return (
     <>
       <Router>
+        <AnimatedBackground />
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Header />

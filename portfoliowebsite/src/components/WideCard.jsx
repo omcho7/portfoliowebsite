@@ -7,13 +7,13 @@ const WideCard = ({ imgSrc, title, description }) => (
       <img
         src={imgSrc}
         alt={title}
-        style={{ width: "100%", height: "auto", borderRadius: "10pt" }}
+        style={{ width: "100%", height: "auto", borderRadius: "15pt" }}
       />
       <Typography
         gutterBottom
         variant="h5"
         component="div"
-        sx={{ fontFamily: 'Montserrat, sans-serif', fontSize: '15pt' }}
+        sx={{ fontFamily: 'Montserrat, sans-serif', fontSize: '15pt', paddingTop: '20pt' }}
       >
         {title}
       </Typography>

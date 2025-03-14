@@ -1,0 +1,63 @@
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  background: rgb(7, 14, 20); /* Dark background */
+}
+
+.orb {
+  position: fixed;
+  width: 50px; /* Orb size */
+  height: 50px; /* Orb size */
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  animation: move infinite ease-in-out alternate;
+  background: radial-gradient(circle, hsla(200, 100%, 70%, 0.4), transparent);
+  filter: blur(10px); /* Add a glowing effect */
+}
+
+/* Spread out the orbs with different initial positions */
+.orb1 {
+  top: 10%; /* Top-left corner */
+  left: 15%;
+  animation-duration: 30s; /* Reduced duration for faster animation */
+  animation-delay: -20s;
+}
+
+.orb2 {
+  top: 30%; /* Top-right corner */
+  left: 70%;
+  animation-duration: 28s; /* Reduced duration for faster animation */
+  animation-delay: -25s;
+  background: radial-gradient(circle, hsla(220, 100%, 60%, 0.2), transparent);
+}
+
+.orb3 {
+  top: 60%; /* Bottom-left corner */
+  left: 20%;
+  animation-duration: 26s; /* Reduced duration for faster animation */
+  animation-delay: -18s;
+  background: radial-gradient(circle, hsla(240, 100%, 50%, 0.2), transparent);
+}
+
+.orb4 {
+  top: 80%; /* Bottom-right corner */
+  left: 75%;
+  animation-duration: 24s; /* Reduced duration for faster animation */
+  animation-delay: -15s;
+  background: radial-gradient(circle, hsla(260, 100%, 65%, 0.2), transparent);
+}
+
+@keyframes move {
+  from {
+    transform: rotate(0deg) scale(12) translateX(-20px);
+  }
+  to {
+    transform: rotate(360deg) scale(18) translateX(20px);
+  }
+}
+
